@@ -1,7 +1,5 @@
-package PACKAGE_NAME;
-
-public class ShoppingCartException extends RuntimeException {
-  public ShoppingCartException(String message) {
-    super(message);
-  }
+public class ShoppingCartException extends Exception {
+    public ShoppingCartException(String message) {
+        super(message);
+    }
 }

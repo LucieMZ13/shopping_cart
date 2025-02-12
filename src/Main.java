@@ -11,6 +11,15 @@ public class Main {
         Item item2 = new Item("Tekuté mýdlo (250 ml)",
                 BigDecimal.valueOf(95.0),LocalDate.now(),true,
                 8,Category.consumables);
+        try {
+            Item item = new Item("Minus",BigDecimal.valueOf(-12.5));
+            System.out.println(item.getPrice());
+        }
+        catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+//              nebo pokud chci, aby program po chybové hlášce pokračoval:
+//            e.printStackTrace();
+        }
         
     ShoppingCart shoppingCart1 = new ShoppingCart();
     shoppingCart1.addItem(item1);

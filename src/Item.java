@@ -20,7 +20,7 @@ public class Item {
 
     public Item(String description, BigDecimal price) {
         this.description = description;
-        this.price = price;
+        setPrice(price);
         this.reservationTime = LocalDate.now();
         this.isInStock = true;
         this.quantity = 1;
